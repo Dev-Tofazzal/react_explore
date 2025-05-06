@@ -5,19 +5,21 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
-      <Device></Device>
-      <Person></Person> 
-      <Person></Person> 
+      <Device name="laptop" price="30000"></Device>
+      <Device name="mobile" price= "15000"></Device>
+      <Person name="towfique" age="27"></Person> 
+      <Person name="likhon" age="26"></Person> 
       <Developer></Developer>
     </>
   )
 }
 
-function Person(){
-  const age= 27;
+function Person({name,age}){
+
   return (
     <div className='student'>
-      <h1>My Name Is towfique and I am {age} years old</h1>
+      <h1>My Name is : {name}</h1>
+      <h2>I am {age} years old</h2>
     </div>
   
   )
@@ -39,10 +41,10 @@ function Developer(){
 }
 
 
-function Device(){
+function Device(props){
   return(
     <div>
-      <h2>This Device: laptop </h2>
+      <h2>This Device: {props.name} and Price: {props.price}</h2>
     </div>
   )
 }
