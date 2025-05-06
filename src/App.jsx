@@ -1,10 +1,13 @@
 import './App.css'
+import Todo from './Todo'
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <Todo learn="React" isDo={true}></Todo>
+      <Todo learn="JavaScript" isDo={false}></Todo>
+      <Todo learn="Html and Css" isDo={true}></Todo>
       <Device name="laptop" price="30000"></Device>
       <Device name="mobile" price= "15000"></Device>
       <Person name="towfique" age="27"></Person> 
